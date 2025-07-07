@@ -1,0 +1,136 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/images/home/imgSectionUmInicio.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(29, 30, 43, 0.4);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 2rem 1rem;
+
+    h3 {
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+
+      .hero__dynamic {
+        color: #E8C07D;
+        display: inline-block;
+        animation: fadeInOut 3s ease-in-out infinite;
+      }
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(10px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-10px); }
+    }
+
+    .hero__buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      .btn-primary {
+        background-color: #E8C07D;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 0.6rem 1.5rem;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      .btn-link {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 0.95rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .hero__video-simulated {
+      margin-top: 2rem;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+      }
+
+      .hero__video-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background-color: #E8C07D;
+        border-radius: 50%;
+        clip-path: polygon(40% 30%, 70% 50%, 40% 70%);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__wave-top,
+  &__wave-bottom {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__wave-top {
+    top: 0;
+  }
+
+  &__wave-bottom {
+    bottom: 0;
+  }
+}

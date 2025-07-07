@@ -98,7 +98,6 @@ const Header = () => {
         </nav>
       )}
 
-      {/* Modal de login */}
       <LoginModal isOpen={loginOpen} onClose={() => setLoginOpen(false)} />
     </header>
   );
