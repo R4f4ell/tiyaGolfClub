@@ -9,3 +9,9 @@ $bp-tablet-lg: 800px;
 $bp-desktop-s: 1366px;
 $bp-desktop-m: 1440px;
 $bp-desktop-lg: 1920px;
+
+@mixin media-min($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
