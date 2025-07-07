@@ -1,3 +1,4 @@
+import AboutTiya from "../components/about/AboutTiya";
 import Hero from "../components/hero/Hero";
 import AboutSection from "../components/home/AboutSection";
 import ContactSection from "../components/home/ContactSection";
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
+      <AboutTiya />
       {/* Outras sections da Home virão depois */}
     </main>
   )
