@@ -1,0 +1,166 @@
+.upcoming-events {
+  display: block;
+  margin-top: 20px;
+  padding: 2rem 1rem;
+  background-color: #F4F1DE;
+
+  hr{
+    margin: 15px 0;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    display: block;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+
+    &--transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .event__media   { order: 1; }
+    .event__date    {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 5px;
+        border-radius: 20px;
+        order: 2;
+        margin-top: 15px; 
+        height: 80px;
+        background-color: #81B29A;
+
+            & .event__month {
+                color: white;
+            }
+    }
+    .event__details { 
+        order: 3; 
+        margin: 1rem 0; 
+
+        & .event__name{
+            font-size: 25px;
+            font-weight: 500;
+        }
+        & .event__text{
+            font-size: 18px;
+        }
+
+        & .event__meta .event__meta-item{
+                font-size: 17px;
+        }
+
+        & .event__button{
+            font-size: 16px;
+            font-weight: 600;
+            width: 150px;
+        }
+    }
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 150px 1fr 2fr;
+      align-items: center;
+      gap: 1rem;
+
+      .event__media,
+      .event__date,
+      .event__details {
+        order: initial;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.event__media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+
+  .upcoming-events__item--transparent & {
+    background-image: url('../../assets/images/upcomingEvents/golfPlayer.jpg');
+  }
+  .upcoming-events__item--white & {
+    background-image: url('../../assets/images/upcomingEvents/selfieFriends.jpg');
+  }
+}
+
+.event__date {
+  display: flex;
+  align-items: baseline;
+
+  & .event__day {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  & .event__month {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+
+.event__details {
+  & .event__name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & .event__text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+
+  & .event__meta {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    &-item {
+      font-size: 0.875rem;
+      color: #444;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  & .event__button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #f7c471;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
