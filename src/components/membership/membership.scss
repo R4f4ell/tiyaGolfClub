@@ -1,0 +1,133 @@
+.section-principal {
+  margin-top: 50px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.section-principal__title {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.centralizar-conteiners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.membership-table {
+  width: 100%;
+  max-width: 360px;
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.875rem;
+    text-align: center;
+
+    thead th {
+      background: #2f2e41;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem;
+      &:first-child { border-top-left-radius: 0.5rem; }
+      &:last-child  { border-top-right-radius: 0.5rem; }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) { background: #f4f1e8; }
+        &:last-child td:first-child  { border-bottom-left-radius: 0.5rem; }
+        &:last-child td:last-child   { border-bottom-right-radius: 0.5rem; }
+      }
+      td {
+        padding: 0.75rem;
+        &:nth-child(n+2) { text-align: center; }
+      }
+    }
+
+    .icon-check { color: #4aaa6c; }
+    .icon-times { color: #dc4343; }
+  }
+}
+
+/* --- formulário --- */
+.membership-form {
+  width: 100%;
+  max-width: 360px;
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-card {
+    background: #2f2e41;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .membership-form__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input,
+      textarea {
+        width: 100%;
+        background: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        outline: none;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        background: #f5c16a;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: #e0b45d;
+        }
+      }
+    }
+  }
+}

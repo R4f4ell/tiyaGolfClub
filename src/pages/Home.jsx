@@ -1,15 +1,15 @@
-import AboutTiya from "../components/about/AboutTiya";
 import Hero from "../components/hero/Hero";
-import AboutSection from "../components/home/AboutSection";
-import ContactSection from "../components/home/ContactSection";
-import EventsPreview from "../components/home/EventsPreview";
-import MembershipSection from "../components/home/MembershipSection";
+import AboutTiya from "../components/about/AboutTiya";
+import WaveSection from "../components/wave/WaveSection";
+import Membership from "../components/membership/Membership";
 
 const Home = () => {
   return (
     <main>
       <Hero />
       <AboutTiya />
+      <WaveSection />
+      <Membership />
       {/* Outras sections da Home virão depois */}
     </main>
   )
