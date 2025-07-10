@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './header.scss';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import logo from '../../assets/images/logo/logoGolf-header.png';
 import LoginModal from '../loginModal/LoginModal';
@@ -14,6 +14,7 @@ const Header = () => {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setMenuOpen(false);
@@ -68,15 +69,26 @@ const Header = () => {
     setPagesOpen(false);
   };
 
-  // Força o reload ao clicar na logo ou nome
-  const reloadPage = () => {
-    window.location.reload();
+  // 🆕 Scroll para o topo da home ao clicar na logo
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100); // pequeno delay para esperar a navegação
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__logo" onClick={reloadPage} style={{ cursor: 'pointer' }}>
+        <div
+          className="header__logo"
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        >
           <img src={logo} alt="Tiya Golf Club Logo" />
           <div className="header__text">
             <strong>Tiya</strong>
