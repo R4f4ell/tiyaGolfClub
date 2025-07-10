@@ -9,7 +9,7 @@ const Membership = () => {
   };
 
   return (
-    <div className="section-principal">
+    <div className="section-principal" id='membership'>
       {/* Título */}
       <h1 className="section-principal__title">Membership at Tiya</h1>
 

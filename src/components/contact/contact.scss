@@ -1,0 +1,106 @@
+.contact {
+  padding: 4rem 1.5rem 0 1.5rem;
+
+  &__container {
+    display: block;
+  }
+
+  &__form {
+    margin-bottom: 3rem;
+
+    .contact__title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .contact__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        input {
+          padding: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 30px;
+          font-size: 18px;
+        }
+      }
+
+      textarea {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        font-size: 18px;
+        resize: vertical;
+      }
+
+      .contact__button {
+        padding: 1rem;
+        border: none;
+        border-radius: 30px;
+        background-color: #f5cf8e; 
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(#f5cf8e, 10%);
+        }
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    background-image: url('../../assets/images/contact/worldMap.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 250px;
+
+    &-box {
+      background-color: #3d405bee;
+      color: #fff;
+      border-radius: 20px;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        padding: 2rem 2rem 0 2rem;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+        font-size: 17px;
+      }
+
+      .contact__directions {
+        display: inline-block;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #d96c4f;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(#d96c4f, 10%);
+        }
+      }
+    }
+  }
+}

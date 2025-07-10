@@ -2,7 +2,7 @@ import './upcomingEvents.scss'
 
 const UpcomingEvents = () => {
   return (
-    <section className="upcoming-events">
+    <section className="upcoming-events" id='upcoming-events'>
       <div className="upcoming-events__container">
         <h2 className="upcoming-events__title">Upcoming Events</h2>
         <div className="upcoming-events__list">

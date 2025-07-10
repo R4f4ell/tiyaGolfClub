@@ -38,16 +38,51 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen]);
 
+  // Scroll suave com tempo ajustável
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const topOffset = section.offsetTop;
+    const duration = 200;
+    const start = window.pageYOffset;
+    const distance = topOffset - start;
+    let startTime = null;
+
+    const animateScroll = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const timeElapsed = timestamp - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      window.scrollTo(0, start + distance * easeInOutCubic(progress));
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    const easeInOutCubic = (t) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    requestAnimationFrame(animateScroll);
+
+    setMenuOpen(false);
+    setPagesOpen(false);
+  };
+
+  // Força o reload ao clicar na logo ou nome
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   return (
     <header className="header">
       <div className="header__container">
-        <Link to="/" className="header__logo">
+        <div className="header__logo" onClick={reloadPage} style={{ cursor: 'pointer' }}>
           <img src={logo} alt="Tiya Golf Club Logo" />
           <div className="header__text">
             <strong>Tiya</strong>
             <span>GOLF CLUB</span>
           </div>
-        </Link>
+        </div>
 
         <div className="header__actions">
           <button className="header__login" onClick={() => setLoginOpen(true)}>
@@ -67,11 +102,11 @@ const Header = () => {
 
       {menuOpen && (
         <nav ref={menuRef} className="header__mobile-menu">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/membership">Membership</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/contact">Contact Us</Link>
+          <a onClick={() => scrollToSection('hero')}>Home</a>
+          <a onClick={() => scrollToSection('about-tiya')}>About</a>
+          <a onClick={() => scrollToSection('membership')}>Membership</a>
+          <a onClick={() => scrollToSection('upcoming-events')}>Events</a>
+          <a onClick={() => scrollToSection('contact')}>Contact Us</a>
 
           <div className="pages-submenu">
             <div

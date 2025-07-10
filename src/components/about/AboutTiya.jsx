@@ -4,7 +4,7 @@ import imgSandyAbout from '../../assets/images/about/imgSandyAbout.jpg';
 
 const AboutTiya = () => {
   return (
-    <section className="about-tiya">
+    <section className="about-tiya" id='about-tiya'>
       <p className="about-tiya__subtitle">About Tiya</p>
       <h2 className="about-tiya__title">Tiya Club History</h2>
       <p className="about-tiya__description">
