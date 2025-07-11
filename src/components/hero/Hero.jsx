@@ -19,22 +19,23 @@ const Hero = () => {
       <div className="hero__overlay"></div>
 
       <div className="hero__content">
-        <h3>Welcome to the club</h3>
-        <h1>
-          Tiya is{' '}
-          <span className="hero__dynamic" key={index}>
-            {words[index]}
-          </span>
-        </h1>
+        <div className="hero__text">
+          <h3>Welcome to the club</h3>
+          <h1>
+            Tiya is{' '}
+            <span className="hero__dynamic" key={index}>
+              {words[index]}
+            </span>
+          </h1>
 
-        <div className="hero__buttons">
-          <a href="#" className="btn-primary">Our Story</a>
-          <a href="#" className="btn-link">Become a member</a>
+          <div className="hero__buttons">
+            <a href="#" className="btn-primary">Our Story</a>
+            <a href="#" className="btn-link">Become a member</a>
+          </div>
         </div>
 
         <div className="hero__video-simulated">
           <img src={youtubeThumb} alt="Simulated YouTube Video" />
-          <div className="hero__video-play"></div>
         </div>
       </div>
 

@@ -39,7 +39,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen]);
 
-  // Scroll suave com tempo ajustável
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
@@ -69,13 +68,12 @@ const Header = () => {
     setPagesOpen(false);
   };
 
-  // 🆕 Scroll para o topo da home ao clicar na logo
   const handleLogoClick = () => {
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 100); // pequeno delay para esperar a navegação
+      }, 100);
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -97,6 +95,24 @@ const Header = () => {
         </div>
 
         <div className="header__actions">
+          <nav className="header__desktop-menu">
+            <a onClick={() => scrollToSection('hero')}>Home</a>
+            <a onClick={() => scrollToSection('about-tiya')}>About</a>
+            <a onClick={() => scrollToSection('membership')}>Membership</a>
+            <a onClick={() => scrollToSection('upcoming-events')}>Events</a>
+            <a onClick={() => scrollToSection('contact')}>Contact Us</a>
+
+            <div className="header__pages-dropdown">
+              <span className="header__pages-trigger">
+                Pages <ChevronDown size={14} />
+              </span>
+              <div className="header__pages-content">
+                <Link to="/pages/event-listing">Event Listing</Link>
+                <Link to="/pages/event-detail">Event Detail</Link>
+              </div>
+            </div>
+          </nav>
+
           <button className="header__login" onClick={() => setLoginOpen(true)}>
             Member Login
           </button>

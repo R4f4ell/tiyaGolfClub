@@ -22,6 +22,9 @@
     z-index: 2;
     color: #fff;
     padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     h3 {
       font-size: 23px;
@@ -103,23 +106,6 @@
         display: block;
         border-radius: 12px;
       }
-
-      .hero__video-play {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        background-color: #E8C07D;
-        border-radius: 50%;
-        clip-path: polygon(40% 30%, 70% 50%, 40% 70%);
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: translate(-50%, -50%) scale(1.1);
-        }
-      }
     }
   }
 
@@ -145,20 +131,18 @@
   &__wave-bottom {
     bottom: 0;
   }
-}
 
-// Estilos aplicados somente para tablets (largura mínima de 768px)
-@media (min-width: 768px) {
-  .hero {
+  // Tablet (768px – 1024px)
+  @media (min-width: 768px) and (max-width: 1024px) {
     &__content {
-      padding-inline: 2.5rem; // mais espaço nas laterais
+      padding-inline: 2.5rem;
 
       h3 {
-        font-size: 26px; // título secundário maior
+        font-size: 26px;
       }
 
       h1 {
-        font-size: 55px; // título principal maior
+        font-size: 55px;
       }
 
       .hero__buttons {
@@ -169,6 +153,70 @@
 
         .btn-link {
           font-size: 19px;
+        }
+      }
+
+      // 🔧 Corrigindo imagem que ficava estreita no tablet
+      .hero__video-simulated {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // Desktop (a partir de 1025px)
+  @media (min-width: 1025px) {
+    &__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero__video-simulated {
+      flex: 1;
+      max-width: 480px;
+      margin-top: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .hero__video-play {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .hero__text {
+      flex: 1;
+
+      h3 {
+        font-size: 28px;
+      }
+
+      h1 {
+        font-size: 58px;
+      }
+
+      .hero__buttons {
+        margin-top: 1.5rem;
+
+        .btn-primary {
+          font-size: 18px;
+          padding: 0.8rem 2rem;
+        }
+
+        .btn-link {
+          font-size: 17px;
         }
       }
     }
