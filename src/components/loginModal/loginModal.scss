@@ -6,6 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @media (min-width: 768px){
+    justify-content: right;
+  }
 }
 
 .login-modal {
@@ -17,6 +21,16 @@
   animation: slideIn 0.4s ease forwards;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px){
+    width: 50vw;
+  }
+
+  @media (max-width: 800px) {
+    max-width: none;
+    height: 100vh;
+    border-radius: 0;
+  }
 }
 
 @keyframes slideIn {
@@ -60,11 +74,19 @@
   gap: 1.25rem;
   padding: 0 3rem;
 
+  @media (min-width: 768px){
+    padding: 0 2rem;
+  }
+
   label {
     display: flex;
     flex-direction: column;
     font-size: 0.95rem;
     color: #1e1e1e;
+
+    @media (min-width: 768px){
+      font-size: 19px;
+    }
 
     input {
       margin-top: 0.5rem;
@@ -75,6 +97,10 @@
       font-size: 1rem;
       background: #fff;
       transition: border 0.3s ease;
+
+      @media (min-width: 768px){
+        font-size: 1.3rem;
+      }
 
       &:hover {
         border: 2px solid #000;
@@ -93,6 +119,11 @@
   input {
     width: 16px;
     height: 16px;
+
+    @media (min-width: 768px){
+      width: 19px;
+      height: 19px;  
+    }
   }
 }
 
@@ -108,6 +139,12 @@
   align-self: center;
   width: 180px;
 
+  @media (min-width: 768px){
+    width: 200px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
   &:hover {
     opacity: 0.9;
   }
@@ -119,6 +156,11 @@
   color: #1e1e1e;
   text-decoration: none;
   text-align: center;
+
+  @media (min-width: 768px){
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
 
   &:hover {
     color: #E8C07D;

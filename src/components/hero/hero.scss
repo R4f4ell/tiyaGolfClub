@@ -40,10 +40,22 @@
     }
 
     @keyframes fadeInOut {
-      0% { opacity: 0; transform: translateY(10px); }
-      10% { opacity: 1; transform: translateY(0); }
-      90% { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0; transform: translateY(-10px); }
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
     }
 
     .hero__buttons {
@@ -132,5 +144,33 @@
 
   &__wave-bottom {
     bottom: 0;
+  }
+}
+
+// Estilos aplicados somente para tablets (largura mínima de 768px)
+@media (min-width: 768px) {
+  .hero {
+    &__content {
+      padding-inline: 2.5rem; // mais espaço nas laterais
+
+      h3 {
+        font-size: 26px; // título secundário maior
+      }
+
+      h1 {
+        font-size: 55px; // título principal maior
+      }
+
+      .hero__buttons {
+        .btn-primary {
+          font-size: 20px;
+          padding: 1rem 2rem;
+        }
+
+        .btn-link {
+          font-size: 19px;
+        }
+      }
+    }
   }
 }

@@ -10,12 +10,17 @@
 }
 
 .newsletter-card {
-  background: rgba(255, 255, 255, 0.801);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   max-width: 450px;
   width: 90%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+   @media (min-width: 768px){
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.781);;
+   }
 
   h2 {
     margin: 0 0 0.5rem;
@@ -49,9 +54,13 @@
 
   .icon-mail {
     flex-shrink: 0;
-    font-size: 1.25rem;  /* cerca de 20px */
+    font-size: 1.25rem;
     color: #999;
     margin-right: 0.75rem;
+
+    @media (min-width: 768px){
+      font-size: 22px;
+    }
   }
 
   .form-input {
@@ -61,6 +70,12 @@
     outline: none;
     font-size: 17px;
     color: #333;
+
+    @media (min-width: 768px){
+      font-size: 19px;
+      height: 40px;
+      padding: 6px 0;
+    }
 
     &::placeholder {
       color: #aaa;
@@ -80,6 +95,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+
+  @media (min-width: 768px){
+      font-size: 20px;
+      height: 60px;
+      font-weight: 700;
+    }
 
   &:hover {
     background: #e0b45d;
