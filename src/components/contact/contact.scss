@@ -53,6 +53,10 @@
         &:hover {
           background-color: darken(#f5cf8e, 10%);
         }
+
+        @media (min-width: 768px){
+          font-size: 19px;
+        }
       }
     }
   }
@@ -73,16 +77,27 @@
       margin: 0 auto;
       text-align: center;
 
+      @media (min-width: 768px){
+        max-width: 400px;
+      }
+
       h3 {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 1rem;
         padding: 2rem 2rem 0 2rem;
+
+        @media (min-width: 768px){
+          font-size: 20px;
+        }
       }
 
       p {
         margin-bottom: 0.5rem;
         font-size: 17px;
+        @media (min-width: 768px){
+          font-size: 18px;
+        }
       }
 
       .contact__directions {
@@ -92,10 +107,14 @@
         padding: 0.7rem 1.5rem;
         background-color: #d96c4f;
         color: #fff;
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
         font-weight: bold;
         text-decoration: none;
         transition: background-color 0.3s;
+
+        @media (min-width: 768px){
+          font-size: 18px;
+        }
 
         &:hover {
           background-color: darken(#d96c4f, 10%);

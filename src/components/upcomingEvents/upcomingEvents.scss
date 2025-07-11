@@ -39,7 +39,9 @@
       box-shadow: none;
     }
 
-    .event__media   { order: 1; }
+    .event__media   { 
+      order: 1; 
+    }
     .event__date    {
         display: flex;
         align-items: center;
