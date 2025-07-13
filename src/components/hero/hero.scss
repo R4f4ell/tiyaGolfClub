@@ -35,30 +35,24 @@
       font-size: 2rem;
       font-weight: 700;
 
+      .hero__dynamic-wrapper {
+        display: inline-block;
+        min-width: 90px;
+      }
+
       .hero__dynamic {
         color: #E8C07D;
         display: inline-block;
         animation: fadeInOut 3s ease-in-out infinite;
+        transition: opacity 0.3s ease;
       }
     }
 
     @keyframes fadeInOut {
-      0% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      10% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      90% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
     }
 
     .hero__buttons {
@@ -78,9 +72,7 @@
         font-size: 0.95rem;
         transition: opacity 0.3s;
 
-        &:hover {
-          opacity: 0.9;
-        }
+        &:hover { opacity: 0.9; }
       }
 
       .btn-link {
@@ -89,9 +81,7 @@
         text-decoration: none;
         font-size: 0.95rem;
 
-        &:hover {
-          text-decoration: underline;
-        }
+        &:hover { text-decoration: underline; }
       }
     }
 
@@ -105,6 +95,7 @@
         width: 100%;
         display: block;
         border-radius: 12px;
+        object-fit: cover;
       }
     }
   }
@@ -124,51 +115,31 @@
     }
   }
 
-  &__wave-top {
-    top: 0;
-  }
+  &__wave-top { top: 0; }
+  &__wave-bottom { bottom: 0; }
 
-  &__wave-bottom {
-    bottom: 0;
-  }
-
-  // Tablet (768px – 1024px)
   @media (min-width: 768px) and (max-width: 1024px) {
     &__content {
       padding-inline: 2.5rem;
 
-      h3 {
-        font-size: 26px;
-      }
-
-      h1 {
-        font-size: 55px;
-      }
+      h3 { font-size: 26px; }
+      h1 { font-size: 55px; }
 
       .hero__buttons {
         .btn-primary {
           font-size: 20px;
           padding: 1rem 2rem;
         }
-
-        .btn-link {
-          font-size: 19px;
-        }
+        .btn-link { font-size: 19px; }
       }
 
-      // 🔧 Corrigindo imagem que ficava estreita no tablet
       .hero__video-simulated {
         width: 100%;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
+        img { width: 100%; height: auto; }
       }
     }
   }
 
-  // Desktop (a partir de 1025px)
   @media (min-width: 1025px) {
     &__content {
       max-width: 1200px;
@@ -185,39 +156,23 @@
       max-width: 480px;
       margin-top: 0;
 
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      .hero__video-play {
-        width: 70px;
-        height: 70px;
-      }
+      img { width: 100%; height: auto; }
+      .hero__video-play { width: 70px; height: 70px; }
     }
 
     .hero__text {
       flex: 1;
 
-      h3 {
-        font-size: 28px;
-      }
-
-      h1 {
-        font-size: 58px;
-      }
+      h3 { font-size: 28px; }
+      h1 { font-size: 58px; }
 
       .hero__buttons {
         margin-top: 1.5rem;
-
         .btn-primary {
           font-size: 18px;
           padding: 0.8rem 2rem;
         }
-
-        .btn-link {
-          font-size: 17px;
-        }
+        .btn-link { font-size: 17px; }
       }
     }
   }

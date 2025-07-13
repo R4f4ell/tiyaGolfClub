@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero" id='hero'>
+    <section className="hero" id="hero">
       <div className="hero__overlay"></div>
 
       <div className="hero__content">
@@ -23,8 +23,8 @@ const Hero = () => {
           <h3>Welcome to the club</h3>
           <h1>
             Tiya is{' '}
-            <span className="hero__dynamic" key={index}>
-              {words[index]}
+            <span className="hero__dynamic-wrapper">
+              <span className="hero__dynamic">{words[index]}</span>
             </span>
           </h1>
 
