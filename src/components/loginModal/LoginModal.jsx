@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './LoginModal.scss';
+import './loginModal.scss';
 import { X } from 'lucide-react';
 
 const LoginModal = ({ isOpen, onClose }) => {
