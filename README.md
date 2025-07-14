@@ -15,3 +15,7 @@ Imagens e estilos mantidos como no template original, para fins educacionais e d
 - Framer Motion
 - AOS (Animate On Scroll)
 - Lucide React (ícones modernos)
+
+## 🔗 Links
+- Projeto online: https://tiya-golf-club.vercel.app
+- Código-fonte: https://github.com/seu-usuario/tiya-golf-club

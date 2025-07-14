@@ -58,7 +58,7 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 
   &__login {
@@ -242,6 +242,12 @@
 
   // Desktop (a partir de 1366px)
   @media (min-width: 1366px) {
+    .header__login{
+      height: 50px;
+      padding: 0.5rem 1.25rem;
+      font-size: 1rem;
+    }
+
     &__menu-btn {
       display: none;
     }
@@ -258,7 +264,7 @@
       a {
         color: #fff;
         font-weight: 500;
-        font-size: 0.95rem;
+        font-size: 1rem;
         cursor: pointer;
         text-decoration: none;
 
