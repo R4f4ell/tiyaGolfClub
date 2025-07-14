@@ -1,6 +1,6 @@
 import './waveSection.scss';
 import { FiMail } from 'react-icons/fi';
-import bgImage from '../../assets/images/wave/imgWaveSection.jpg';
+import bgImage from '../../assets/images/wave/imgWaveSection.webp';
 
 export default function WaveSection() {
   const handleSubmit = (e) => {

@@ -1,6 +1,6 @@
 import './aboutTiya.scss';
-import imgMichaelAbout from '../../assets/images/about/imgMichaelAbout.jpg';
-import imgSandyAbout from '../../assets/images/about/imgSandyAbout.jpg';
+import imgMichaelAbout from '../../assets/images/about/imgMichaelAbout.webp';
+import imgSandyAbout from '../../assets/images/about/imgSandyAbout.webp';
 
 const AboutTiya = () => {
   return (

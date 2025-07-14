@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './hero.scss';
-import youtubeThumb from '../../assets/images/home/youtube.jpeg';
+import youtubeThumb from '../../assets/images/home/youtube.webp';
 
 const words = ['Modern', 'Creative', 'Lifestyle'];
 
