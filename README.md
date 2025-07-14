@@ -18,4 +18,4 @@ Imagens e estilos mantidos como no template original, para fins educacionais e d
 
 ## 🔗 Links
 - Projeto online: https://tiya-golf-club.vercel.app
-- Código-fonte: https://github.com/seu-usuario/tiya-golf-club
+- Código-fonte: https://github.com/R4f4ell/tiyaGolfClub
