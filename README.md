@@ -17,5 +17,5 @@ Imagens e estilos mantidos como no template original, para fins educacionais e d
 - Lucide React (ícones modernos)
 
 ## 🔗 Links
-- Projeto online: https://golfclub.rafaelldev.com
+- Projeto online: https://tiyagolfclub.rafaelldev.com
 - Código-fonte: https://github.com/R4f4ell/tiyaGolfClub
