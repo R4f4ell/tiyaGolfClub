@@ -25,7 +25,6 @@ const Contact = () => {
             <p>info@company.com</p>
             <a href="#" className="contact__directions">Directions</a>
           </div>
-          {/* Imagem de fundo do mapa será aplicada via CSS */}
         </div>
       </div>
     </section>
