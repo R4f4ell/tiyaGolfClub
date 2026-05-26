@@ -6,7 +6,7 @@ Imagens e estilos mantidos como no template original, para fins educacionais e d
 
 ---
 
-## 🔧 Tecnologias
+## Tecnologias
 
 - React
 - Vite
@@ -15,7 +15,3 @@ Imagens e estilos mantidos como no template original, para fins educacionais e d
 - Framer Motion
 - AOS (Animate On Scroll)
 - Lucide React (ícones modernos)
-
-## 🔗 Links
-- Projeto online: https://tiyagolfclub.rafaelldev.com
-- Código-fonte: https://github.com/R4f4ell/tiyaGolfClub
